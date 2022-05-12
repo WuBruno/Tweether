@@ -1,0 +1,33 @@
+{
+  "name": "tweether",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "truffle migrate --reset && npm run artifacts && next client",
+    "artifacts": "cp -r ./build/contracts/ ./client/web3/artifacts",
+    "test": "truffle migrate --reset && truffle test",
+    "fund-metamask": "truffle exec ./fund-metamask.js",
+    "rinkeby": "truffle migrate --network rinkeby && npm run artifacts && next client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "gravatar-url": "^4.0.1",
+    "next": "^12.1.6",
+    "next-images": "^1.8.4",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-moment": "^1.1.2",
+    "react-toastify": "^9.0.1",
+    "truffle-contract": "^4.0.31",
+    "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^2.0.1"
+  }
+}
